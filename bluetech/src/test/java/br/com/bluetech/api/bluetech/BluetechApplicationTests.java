@@ -1,0 +1,13 @@
+package br.com.bluetech.api.bluetech;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class BluetechApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
