@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<h:outputStylesheet name="css/primeflex.css" />
+	<title>ACESSO</title>
+	<style type="text/css">
+		.divLogin {
+			margin-top: 140px;
+		}
+
+		.divLogin>h1 {
+			margin-left: 236px;
+			color: #237FFF;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.container
+		{
+			margin-top: 2px;
+		}
+
+		.barranavegacao {
+			overflow: hidden;
+			background-color: #237FFF;
+		}
+
+		.barranavegacao a {
+			float: right;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.barranavegacao a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.barranavegacao a.ativo {
+			float: left;
+			background-color: #237FFF;
+			color: white;
+			margin-left: 14px;
+		}
+	</style>	
+</h:head>
+<h:body>
+
+<div class="container">
+		<div class="barranavegacao">
+			<a class="ativo" href="#BlueTe">Blue Tech</a> 
+			<a href="login.jsf" style="margin-left: 300px;margin-right: 40px;"></a>
+			 <a href="cadastro.jsf">Cadastro</a>
+			 <a href="#web">Fale Conosco</a>	
+			 <a href="#web">Seja Parceiro</a> 
+			 <a href="index.jsf" >Pagina Inicial</a>	
+		</div>
+	</div>
+
+
+
+
+
+	<div >
+		<div class="card">
+			<div class="p-grid p-align-stretch vertical-container">
+				<div class="p-col">
+					<div class="box box-stretched"></div>
+				</div>
+				<div class="p-col">
+
+					<div class="box box-stretched">
+						<div class="divLogin">
+							
+							<h:form>
+								<p:messages id="messages" showDetail="true" closable="true"  >
+									<p:autoUpdate />
+								</p:messages>
+								<br/>
+								<p:inputText id="ipt_login" placeholder="E-mail"
+									value="#{usuarioControle.email}" style="width:100%" />
+								<br />
+								<br />
+								<p:password placeholder="Senha" value="#{usuarioControle.senha}"
+									style="width:100%" />
+								<br />
+								<br />
+								<p:commandButton value="Entrar" action="#{usuarioControle.logar}"
+									style="width:103%" />
+							</h:form>
+						</div>
+					</div>
+
+				</div>
+				<div class="p-col">
+					<div class="box box-stretched"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>
