@@ -84,13 +84,14 @@ public class UsuarioControle implements Serializable {
 			usuario = new Usuario();
 			this.usuario.setEmail(this.getEmail());
 			this.usuario.setSenha(this.getSenha());			
-			this.setEmail("");
-			this.setSenha("");
+			
 			
 			usuario = usuario.autenticar();
 			
 			if(this.usuario.autenticar().getSenha().hashCode() == this.getSenha().hashCode()) 
-			{				
+			{	
+				this.setEmail("");
+				this.setSenha("");
 				return "/usuario/eleicao?faces-redirect=true";
 			}
 			else 
