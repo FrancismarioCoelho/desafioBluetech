@@ -89,7 +89,7 @@ public class UsuarioControle implements Serializable {
 			
 			usuario = usuario.autenticar();
 			
-			if(this.usuario.autenticar()!= null) 
+			if(this.usuario.autenticar().getSenha().hashCode() == this.getSenha().hashCode()) 
 			{				
 				return "/usuario/eleicao?faces-redirect=true";
 			}
